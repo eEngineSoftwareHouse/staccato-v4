@@ -21,11 +21,11 @@ module Staccato::V4
     end
 
     def adapter=(adapter)
-      @adapters = [adapter]
+      @adapters = [adapter.new(default_uri)]
     end
 
     def add_adapter(adapter)
-      @adapters << adapter
+      @adapters << adapter.new(default_uri)
     end
 
     # The measurement id for GA
@@ -58,7 +58,9 @@ module Staccato::V4
     end
 
     def default_uri
-      Staccato::V4.ga_collection_uri
+      Staccato::V4.ga_collection_uri.tap do |uri|
+        uri.query = URI.encode_www_form(params)
+      end
     end
 
     private
@@ -88,12 +90,12 @@ module Staccato::V4
 
     # @private
     def post_first
-      adapters.first.post(params, body)
+      adapters.first.post(body)
     end
 
     # @private
     def post_all
-      adapters.map {|adapter| adapter.post(params, body)}
+      adapters.map { |adapter| adapter.post(body) }
     end
 
     # @private
