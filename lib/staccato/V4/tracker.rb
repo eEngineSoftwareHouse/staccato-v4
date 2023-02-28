@@ -57,6 +57,11 @@ module Staccato::V4
       post
     end
 
+    # clear events array
+    def clear
+      self.events = []
+    end
+
     def default_uri
       Staccato::V4.ga_collection_uri.tap do |uri|
         uri.query = URI.encode_www_form(params)
