@@ -42,5 +42,5 @@ module Staccato
 end
 
 require_relative 'option_set'
-require_relative 'v4/tracker'
-require_relative 'v4/event'
+require_relative 'V4/tracker'
+require_relative 'V4/event'
