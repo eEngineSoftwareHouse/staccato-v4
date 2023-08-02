@@ -3,6 +3,7 @@ module Staccato::V4
     FIELDS = [
       :item_list_id,
       :item_list_name,
+      :session_id,
       :items
     ]
 
