@@ -5,6 +5,8 @@ module Staccato::V4
       :value,
       :coupon,
       :shipping_tier,
+      :session_id,
+      :debug_mode,
       :items
     ]
 

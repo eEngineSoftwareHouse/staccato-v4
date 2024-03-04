@@ -8,6 +8,8 @@ module Staccato::V4
       :coupon,
       :shipping,
       :tax,
+      :session_id,
+      :debug_mode,
       :items
     ]
 

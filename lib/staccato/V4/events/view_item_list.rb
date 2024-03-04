@@ -4,6 +4,7 @@ module Staccato::V4
       :item_list_id,
       :item_list_name,
       :session_id,
+      :debug_mode,
       :items
     ]
 

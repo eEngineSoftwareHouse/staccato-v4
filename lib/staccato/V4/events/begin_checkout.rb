@@ -4,6 +4,8 @@ module Staccato::V4
       :currency,
       :value,
       :coupon,
+      :session_id,
+      :debug_mode,
       :items
     ]
 

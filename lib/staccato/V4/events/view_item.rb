@@ -4,6 +4,7 @@ module Staccato::V4
       :currency,
       :value,
       :session_id,
+      :debug_mode,
       :items
     ]
 
