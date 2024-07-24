@@ -6,6 +6,8 @@ module Staccato::V4
       :location_id,
       :promotion_id,
       :promotion_name,
+      :session_id,
+      :debug_mode,
       :items
     ]
 

@@ -3,6 +3,8 @@ module Staccato::V4
     FIELDS = [
       :currency,
       :value,
+      :session_id,
+      :debug_mode,
       :items
     ]
 

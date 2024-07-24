@@ -5,6 +5,8 @@ module Staccato::V4
       :value,
       :coupon,
       :payment_type,
+      :session_id,
+      :debug_mode,
       :items
     ]
     
